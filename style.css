@@ -1,0 +1,139 @@
+/*root variables*/
+:root {
+  /*colors*/
+  --color-white-000: hsl(0, 0%, 100%);
+  --color-slate-300: hsl(212, 45%, 89%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(218, 44%, 22%);
+
+  /*border radius*/
+  --component-radius: 1.6rem;
+  --component-padding: 0.2rem;
+  --image-radius: 1.4rem; /*(component radius) - (component padding)*/
+
+  /*sizes, mobile first*/
+  --component-height: 36rem;
+  --component-width: 21rem;
+  --image-width: 18rem;
+
+  /*component gap*/
+  --component-gap: 2rem;
+
+  /*margin-top*/
+  --image-margin-top: 1.8rem;
+
+  /*Font sizez*/
+  --size-header: 1.8rem;
+  --size-paragraph: 1.2rem;
+}
+
+/*default fixes*/
+html,
+body,
+*,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*Make 1rem = 10px*/
+  font-size: 62.5%;
+  /*default font family*/
+  font-family: "Outfit", sans-serif;
+  /*hide overflow*/
+  overflow: hidden;
+}
+
+main {
+  /*full screen, flex, one item at the center*/
+  height: 100dvh;
+  width: 100dvw;
+
+  display: flex;
+  justify-content: center; /*main axis, horizonal*/
+  align-items: center; /*cross axis, vertical*/
+
+  background-color: var(--color-slate-300);
+}
+
+p {
+  /*default paragraph font size*/
+  font-size: var(--size-paragraph);
+}
+
+h3 {
+  /*default heading font size*/
+  font-size: var(--size-header);
+}
+
+img {
+  /*fit image*/
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  object-fit: contain;
+}
+
+/*main component*/
+.component {
+  /*size*/
+  height: var(--component-height);
+  width: var(--component-width);
+  /*flex center all, col*/
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /*main axis, vertical*/
+  align-items: center; /*cross axis, horizontal*/
+  gap: var(--component-gap);
+  /*component padding*/
+  padding: var(--component-padding);
+  /*border radius*/
+  border-radius: var(--component-radius);
+  /*background color*/
+  background-color: var(--color-white-000);
+}
+
+/*image container*/
+.qr-container {
+  /*size*/
+  max-width: var(--image-width);
+  /*radius*/
+  border-radius: var(--image-radius);
+  /*margin-top*/
+  margin-top: var(--image-margin-top);
+}
+
+/*main message*/
+.main-message h3 {
+  /*Typography*/
+  text-align: center;
+}
+
+/*information text*/
+.information-text p {
+  /*Typography*/
+  text-align: center;
+
+  /*opacity*/
+  opacity: 80%;
+}
+
+/*footer*/
+.attribution {
+  /*fixed bottom right*/
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+/*Media queries, mobile first design*/
+@media (width > 375px) {
+  /*update the root variables*/
+  :root {
+    --component-height: 40rem;
+    --component-width: 24rem;
+    --image-width: 20rem;
+  }
+}
