@@ -22,9 +22,12 @@
   /*margin-top*/
   --image-margin-top: 1.8rem;
 
-  /*Font sizez*/
+  /*Font sizes*/
   --size-header: 1.8rem;
   --size-paragraph: 1.2rem;
+
+  /*shadow*/
+  --component-shadow: 0.1rem 0.2rem 2rem 0.2rem var(--color-slate-500);
 }
 
 /*default fixes*/
@@ -93,6 +96,8 @@ img {
   border-radius: var(--component-radius);
   /*background color*/
   background-color: var(--color-white-000);
+  /*box shadow*/
+  box-shadow: var(--component-shadow);
 }
 
 /*image container*/
@@ -132,8 +137,16 @@ img {
 @media (width > 375px) {
   /*update the root variables*/
   :root {
-    --component-height: 40rem;
-    --component-width: 24rem;
+    /*sizes*/
+    --component-height: 36rem;
+    --component-width: 22rem;
     --image-width: 20rem;
+
+    /*image margin top*/
+    --image-margin-top: 1rem;
+
+    /*font sizes*/
+    --size-header: 1.6rem;
+    --size-paragraph: 1.2rem;
   }
 }
